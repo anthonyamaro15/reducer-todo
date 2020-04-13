@@ -6,11 +6,13 @@ import DisplayTodo from "./DisplayTodo";
 const MainApp = () => {
   const [state, dispatch] = useReducer(reducerTodo, initialValue);
 
-  //   console.log(state.todos);
+  const addTodo = (item) => {
+    dispatch({ type: "ADD_TODO", payload: item });
+  };
   return (
     <div>
       <h1>MainApp</h1>
-      <TodoForm />
+      <TodoForm addTodo={addTodo} />
       {state.todos.map((item) => (
         <DisplayTodo key={item.id} todo={item} />
       ))}

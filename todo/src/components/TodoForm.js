@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 
-const TodoForm = () => {
+const TodoForm = ({ addTodo }) => {
   return (
     <div>
       <Formik
@@ -13,7 +13,7 @@ const TodoForm = () => {
             completed: false,
             id: new Date().toString(),
           };
-          console.log(obj);
+          addTodo(obj);
           resetForm();
         }}
       >
