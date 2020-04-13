@@ -9,12 +9,21 @@ const MainApp = () => {
   const addTodo = (item) => {
     dispatch({ type: "ADD_TODO", payload: item });
   };
+
+  const toggleTodo = (id) => {
+    dispatch({ type: "TOGGLE_TODO", payload: id });
+  };
+
   return (
     <div>
       <h1>MainApp</h1>
       <TodoForm addTodo={addTodo} />
       {state.todos.map((item) => (
-        <DisplayTodo key={item.id} todo={item} />
+        <DisplayTodo
+          key={item.id}
+          todo={item}
+          toggleTodo={() => toggleTodo(item.id)}
+        />
       ))}
     </div>
   );
