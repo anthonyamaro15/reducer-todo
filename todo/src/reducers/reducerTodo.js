@@ -19,10 +19,16 @@ export const reducerTodo = (state, action) => {
         }
         return item;
       });
-      console.log(result);
       return {
         ...state,
         todos: result,
+      };
+
+    case "REMOVE_COMPLETED":
+      const filtered = state.todos.filter((item) => item.completed !== true);
+      return {
+        ...state,
+        todos: filtered,
       };
     default:
       return state;

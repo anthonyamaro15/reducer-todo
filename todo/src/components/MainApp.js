@@ -14,6 +14,10 @@ const MainApp = () => {
     dispatch({ type: "TOGGLE_TODO", payload: id });
   };
 
+  const removeCompleted = () => {
+    dispatch({ type: "REMOVE_COMPLETED" });
+  };
+
   return (
     <div>
       <h1>MainApp</h1>
@@ -25,6 +29,8 @@ const MainApp = () => {
           toggleTodo={() => toggleTodo(item.id)}
         />
       ))}
+
+      <button onClick={removeCompleted}>remove</button>
     </div>
   );
 };
