@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.App {
+  width: 1000px;
+  margin: 4rem auto 0;
+  font-size: 1.2rem;
+  padding: 1rem;
+
+  h1 {
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .remove-completed {
+    display: block;
+    font-size: 1rem;
+    padding: 0.4rem 2rem;
+    text-transform: capitalize;
+    background: rgb(220, 20, 20);
+    color: white;
+    border-radius: 5px;
+    margin: 4rem auto 2rem;
+  }
+
+  .todo-container {
+    .todo {
+      border: 1px solid rgb(197, 197, 203);
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      padding: 0.4rem;
+      text-transform: capitalize;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: rgb(198, 193, 193);
+      background: #f3f3f3;
+    }
+  }
+
+  .form {
+    width: 50%;
+    margin: 3rem auto;
+
+    input {
+      display: inline-block;
+      width: 60%;
+      font-size: 1rem;
+      padding: 0.5rem 0.3rem;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid rgb(197, 197, 203);
+      text-transform: capitalize;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 0.5rem 2rem;
+      display: inline-block;
+      margin-left: 1rem;
+      text-transform: capitalize;
+      background: rgb(14, 62, 147);
+      color: white;
+      border-radius: 5px;
+    }
+  }
+}
