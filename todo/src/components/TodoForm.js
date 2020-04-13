@@ -3,7 +3,7 @@ import { Formik, Form, Field } from "formik";
 
 const TodoForm = ({ addTodo }) => {
   return (
-    <div>
+    <div className="form">
       <Formik
         initialValues={{ item: "" }}
         onSubmit={(values, { resetForm }) => {

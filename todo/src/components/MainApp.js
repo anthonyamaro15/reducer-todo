@@ -19,8 +19,8 @@ const MainApp = () => {
   };
 
   return (
-    <div>
-      <h1>MainApp</h1>
+    <div className="App">
+      <h1>todo app</h1>
       <TodoForm addTodo={addTodo} />
       {state.todos.map((item) => (
         <DisplayTodo
@@ -30,7 +30,13 @@ const MainApp = () => {
         />
       ))}
 
-      <button onClick={removeCompleted}>remove</button>
+      {state.todos.length > 0 ? (
+        <button className="remove-completed" onClick={removeCompleted}>
+          remove
+        </button>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

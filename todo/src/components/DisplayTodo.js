@@ -1,10 +1,10 @@
 import React from "react";
 
 const DisplayTodo = ({ todo, toggleTodo }) => {
-  //   console.log(todo);
+  const toggle = todo.completed ? "completed todo" : "todo";
   return (
-    <div>
-      <div onClick={toggleTodo}>
+    <div className="todo-container">
+      <div onClick={toggleTodo} className={toggle}>
         <p>{todo.item}</p>
       </div>
     </div>
